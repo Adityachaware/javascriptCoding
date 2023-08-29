@@ -52,3 +52,17 @@ const friends = [
 
   const allBooks = friends.flatMap((person) => person.books);
 console.log(allBooks); // output :['Bible', 'Harry Potter', 'War and peace', 'Romeo and Juliet', 'The Lord of the Rings', 'The Shining']
+
+// example of reduce funvtion  using reduce
+
+const friends1 = [
+  { name: "Anna", books: ["Bible", "Harry Potter"] },
+  { name: "Bob", books: ["War and peace", "Romeo and Juliet"] },
+  { name: "Alice", books: ["The Lord of the Rings", "The Shining"] },
+];
+
+let res24 = friends1.reduce((accumulator,currentValue) => {
+  return [...accumulator,...currentValue.books];
+},[]);
+
+console.log(res24,"res24");
